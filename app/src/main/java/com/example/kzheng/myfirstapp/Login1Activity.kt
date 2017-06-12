@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 
 class Login1Activity : AppCompatActivity() {
 
@@ -25,8 +26,13 @@ class Login1Activity : AppCompatActivity() {
 
         if (account.length > 0 && password.length > 0) {
             Log.i("login", "logging in with account: $account password: $password")
+
+            // TODO: check login credentials
         } else {
             Log.i("login", "invalid account and password")
+
+            val toast = Toast.makeText(this, "Invalid account and password", 5)
+            toast.show()
         }
     }
 }
