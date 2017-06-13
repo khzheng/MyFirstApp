@@ -2,12 +2,12 @@ package com.example.kzheng.myfirstapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 
 class Login1Activity : AppCompatActivity() {
+    val api = API()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,12 +25,15 @@ class Login1Activity : AppCompatActivity() {
         val password = passwordEditText?.text.toString()
 
         if (account.isNotEmpty() && password.isNotEmpty()) {
-            Log.i("login", "logging in with account: $account password: $password")
-
-            // TODO: check login credentials
+            val loginSuccess = api.login(account, password)
+            if (loginSuccess) {
+                val toast = Toast.makeText(this, "Login success!", Toast.LENGTH_LONG)
+                toast.show()
+            } else {
+                val toast = Toast.makeText(this, "Login failed!", Toast.LENGTH_LONG)
+                toast.show()
+            }
         } else {
-            Log.i("login", "invalid account and password")
-
             val toast = Toast.makeText(this, "Invalid account and password", Toast.LENGTH_SHORT)
             toast.show()
         }
