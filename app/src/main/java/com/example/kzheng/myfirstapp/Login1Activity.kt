@@ -24,7 +24,7 @@ class Login1Activity : AppCompatActivity() {
         val account = accountEditText?.text.toString()
         val password = passwordEditText?.text.toString()
 
-        if (account.length > 0 && password.length > 0) {
+        if (account.isNotEmpty() && password.isNotEmpty()) {
             Log.i("login", "logging in with account: $account password: $password")
 
             // TODO: check login credentials
