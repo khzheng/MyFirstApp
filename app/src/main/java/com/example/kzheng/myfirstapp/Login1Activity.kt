@@ -31,7 +31,7 @@ class Login1Activity : AppCompatActivity() {
         } else {
             Log.i("login", "invalid account and password")
 
-            val toast = Toast.makeText(this, "Invalid account and password", 5)
+            val toast = Toast.makeText(this, "Invalid account and password", Toast.LENGTH_SHORT)
             toast.show()
         }
     }
