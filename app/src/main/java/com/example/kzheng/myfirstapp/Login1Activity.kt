@@ -7,11 +7,13 @@ import android.widget.EditText
 import android.widget.Toast
 
 class Login1Activity : AppCompatActivity() {
-    val api = API()
+    lateinit var api: API
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login1)
+
+        api = API(this)
 
         val loginButton = findViewById(R.id.loginButton)
         loginButton.setOnClickListener { login(it) }
