@@ -10,18 +10,19 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        // BL - changed to my activity_loginben.xml
+        setContentView(R.layout.activity_loginben)
 
         val loginButton = findViewById(R.id.loginButton)
         loginButton.setOnClickListener { login(it) }
 
-        val signupButton = findViewById(R.id.signupButton)
+        val signupButton = findViewById(R.id.signUpButton)
         signupButton.setOnClickListener { signup(it) }
     }
 
     fun login(view: View) {
         // change intent to your class to switch activities
-        val intent = Intent(this, Login1Activity::class.java)
+        val intent = Intent(this, LoginActivityBen::class.java)
         startActivity(intent)
     }
 
