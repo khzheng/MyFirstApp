@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         // BL - changed to my activity_loginben.xml
         setContentView(R.layout.activity_loginben)
 
-        val loginButton = findViewById(R.id.loginButton)
+        val loginButton = findViewById(R.id.loginbutton)
         loginButton.setOnClickListener { login(it) }
 
-        val signupButton = findViewById(R.id.signUpButton)
-        signupButton.setOnClickListener { signup(it) }
+//        val signupButton = findViewById(R.id.signupbutton)
+//        signupButton.setOnClickListener { signup(it) }
     }
 
     fun login(view: View) {
@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun signup(view: View) {
-        val intent = Intent(this, Signup1Activity::class.java)
-        startActivity(intent)
-    }
+//    fun signup(view: View) {
+//        val intent = Intent(this, Signup1Activity::class.java)
+//        startActivity(intent)
+//    }
 }
