@@ -1,12 +1,14 @@
 package com.example.kzheng.myfirstapp
 
-import android.app.PendingIntent.getActivity
 import android.content.Context
 import android.util.Log
 
 /**
  * Created by kzheng on 6/13/17.
  */
+
+// TODO: methods should return specific errors instead of Booleans, define an Enum type APIErrors
+
 class API(context: Context) {
     val sharedPrefs = context.getSharedPreferences("com.myfirstapp.accounts", Context.MODE_PRIVATE)
 
@@ -38,7 +40,7 @@ class API(context: Context) {
     fun signup(account: String, password: String): Boolean {
         Log.i("API", "signup account: $account password: $password")
 
-        // TODO: sanity checks: account and password requirements, account already exists
+        // TODO: sanity checks: account and password requirements
 
         val sharedPrefsEditor = sharedPrefs.edit()
         sharedPrefsEditor.putString(account, password)
