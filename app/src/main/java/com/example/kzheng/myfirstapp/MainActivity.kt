@@ -34,7 +34,8 @@ class MainActivity : AppCompatActivity() {
 
     fun benButtonClicked(view: View) {
         // TODO: start your intent here
-//        val intent = Intent(this, LoginActivityBen::class.java)
-//        startActivity(intent)
+        val intent = Intent(this, LoginActivityBen::class.java)
+        startActivity(intent)
+
     }
 }
