@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.example.kzheng.myfirstapp.MainActivity">
+    tools:context="com.example.kzheng.myfirstapp.Landing1Activity">
 
     <Button
         android:id="@+id/loginButton"

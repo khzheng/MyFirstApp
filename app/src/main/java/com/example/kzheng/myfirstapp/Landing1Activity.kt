@@ -6,15 +6,15 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 
-class MainActivity : AppCompatActivity() {
+class Landing1Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // BL - changed to my activity_loginben.xml
-        setContentView(R.layout.activity_loginben)
+        setContentView(R.layout.activity_landing1)
 
-        val loginButton = findViewById(R.id.loginbutton)
-        loginButton.setOnClickListener { login(it) }
+//        val loginButton = findViewById(R.id.loginbutton)
+//        loginButton.setOnClickListener { login(it) }
 
 //        val signupButton = findViewById(R.id.signupbutton)
 //        signupButton.setOnClickListener { signup(it) }
