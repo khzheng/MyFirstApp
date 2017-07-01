@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.kzheng.myfirstapp.MainActivity">
+
+    <Button
+        android:id="@+id/kenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ken"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/garthButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Garth"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="144dp" />
+
+    <Button
+        android:id="@+id/benButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ben"
+        tools:layout_editor_absoluteX="244dp"
+        tools:layout_editor_absoluteY="144dp" />
+</LinearLayout>
