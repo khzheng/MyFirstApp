@@ -19,7 +19,6 @@
         <activity android:name=".Login1Activity" />
         <activity android:name=".Signup1Activity" />
         <activity android:name=".List1Activity" />
-        <activity android:name=".loginGarth" />
         <activity android:name=".Landing1Activity"></activity>
     </application>
 

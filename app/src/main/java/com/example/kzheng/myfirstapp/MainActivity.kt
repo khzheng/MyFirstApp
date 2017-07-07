@@ -27,8 +27,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun garthButtonClicked(view: View) {
-        val intent = Intent(this, loginGarth::class.java)
-        startActivity(intent)
+        // TODO: start your intent here
+//        val intent = Intent(this, LoginActivityBen::class.java)
+//        startActivity(intent)
     }
 
     fun benButtonClicked(view: View) {
