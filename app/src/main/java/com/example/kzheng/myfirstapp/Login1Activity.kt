@@ -1,9 +1,11 @@
 package com.example.kzheng.myfirstapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.ListView
 import android.widget.Toast
 
 class Login1Activity : AppCompatActivity() {
@@ -31,6 +33,9 @@ class Login1Activity : AppCompatActivity() {
             if (loginSuccess) {
                 val toast = Toast.makeText(this, "Login success!", Toast.LENGTH_LONG)
                 toast.show()
+
+                val intent = Intent(this, List1Activity::class.java)
+                startActivity(intent)
             } else {
                 val toast = Toast.makeText(this, "Login failed!", Toast.LENGTH_LONG)
                 toast.show()

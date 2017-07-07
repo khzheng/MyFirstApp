@@ -3,7 +3,6 @@ package com.example.kzheng.myfirstapp
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 
 class MainActivity : AppCompatActivity() {
@@ -12,21 +11,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val loginButton = findViewById(R.id.loginButton)
-        loginButton.setOnClickListener { login(it) }
+        val kenButton = findViewById(R.id.kenButton)
+        kenButton.setOnClickListener { kenButtonClicked(it) }
 
-        val signupButton = findViewById(R.id.signupButton)
-        signupButton.setOnClickListener { signup(it) }
+        val garthButton = findViewById(R.id.garthButton)
+        garthButton.setOnClickListener { garthButtonClicked(it) }
+
+        val benButton = findViewById(R.id.benButton)
+        benButton.setOnClickListener { benButtonClicked(it) }
     }
 
-    fun login(view: View) {
-        // change intent to your class to switch activities
-        val intent = Intent(this, Login1Activity::class.java)
+    fun kenButtonClicked(view: View) {
+        val intent = Intent(this, Landing1Activity::class.java)
         startActivity(intent)
     }
 
-    fun signup(view: View) {
-        val intent = Intent(this, Signup1Activity::class.java)
-        startActivity(intent)
+    fun garthButtonClicked(view: View) {
+        // TODO: start your intent here
+//        val intent = Intent(this, LoginActivityBen::class.java)
+//        startActivity(intent)
+    }
+
+    fun benButtonClicked(view: View) {
+        // TODO: start your intent here
+//        val intent = Intent(this, LoginActivityBen::class.java)
+//        startActivity(intent)
     }
 }
