@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyFirstApp</string>
+    <string name="loginButton">Button</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email Address</string>
 </resources>
