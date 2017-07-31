@@ -20,7 +20,9 @@
         <activity android:name=".Signup1Activity" />
         <activity android:name=".List1Activity" />
         <activity android:name=".LoginActivityBen" />
-        <activity android:name=".Landing1Activity"></activity>
+        <activity android:name=".Landing1Activity"/>
+        <activity android:name=".LoginActivityGarth">
+        </activity>
     </application>
 
 </manifest>
