@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kzheng.myfirstapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -21,6 +22,7 @@
         <activity android:name=".List1Activity" />
         <activity android:name=".LoginActivityBen" />
         <activity android:name=".Landing1Activity"/>
+        <activity android:name=".TideInfoActivity"/>
         <activity android:name=".LoginActivityGarth">
         </activity>
     </application>
