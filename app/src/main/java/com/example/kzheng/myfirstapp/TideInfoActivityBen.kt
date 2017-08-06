@@ -19,7 +19,7 @@ class TideInfoActivityBen : AppCompatActivity () {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tideinfo)
+        setContentView(R.layout.activity_tideinfoBen)
     }
 
     protected fun GetTideInfo (view:View) {
