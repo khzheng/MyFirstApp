@@ -15,25 +15,25 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 
-class TideInfoActivity: AppCompatActivity () {
+class TideInfoActivityBen : AppCompatActivity () {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tideinfo)
     }
 
-    protected fun TideInfoActivity (view:View) {
+    protected fun GetTideInfo (view:View) {
 
 
         //TODO: create var of the city and state from etCityState and append toString
         var city = etCity.text.toString()
-        var state = etState.text.toString()
+        //var state = etState.text.toString()
 
         //TODO: create val of weatherUndeground link for tide api call
         //see: https://www.wunderground.com/weather/api/d/docs?d=data/tide
         // need to apply API key here
         // NOTE: Bug here... city names greater than one word require underscore
-        val url="http://api.wunderground.com/api/32f6d2632973079d/tide/q/"+ state + "/"+city+".json"
+        val url="http://api.wunderground.com/api/32f6d2632973079d/tide/q/ca/"+city+".json"
         TideAsyncTask().execute(url)
 
     }

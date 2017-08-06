@@ -10,7 +10,6 @@
         android:id="@+id/etState"
         android:layout_width="235dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -18,11 +17,9 @@
         android:hint="State"
         android:inputType="textPersonName"
         android:textAlignment="textStart"
-        app:layout_constraintBottom_toTopOf="@+id/etWeatherResults"
         app:layout_constraintEnd_toStartOf="@+id/SubmitBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCity"
-        app:layout_constraintVertical_bias="0.196" />
+        app:layout_constraintTop_toBottomOf="@+id/etCity" />
 
     <Button
         android:id="@+id/SubmitBtn"
@@ -30,25 +27,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:onClick="GetTideInfo"
         android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etState"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/etWeatherResults"
-        app:layout_constraintVertical_bias="0.305" />
-
-    <EditText
-        android:id="@+id/etWeatherResults"
-        android:layout_width="374dp"
-        android:layout_height="229dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="...Hacking Weather Satellites..."
-        android:textAlignment="center"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="245dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/etCity"
@@ -64,4 +48,21 @@
         app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etWeatherResults"
+        android:layout_width="325dp"
+        android:layout_height="227dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="...Hacking Weather Satellites..."
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etState"
+        app:layout_constraintVertical_bias="0.522" />
 </android.support.constraint.ConstraintLayout>

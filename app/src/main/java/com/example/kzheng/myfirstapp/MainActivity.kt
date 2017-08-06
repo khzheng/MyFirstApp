@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         val benButton = findViewById(R.id.benButton)
         benButton.setOnClickListener { benButtonClicked(it) }
+
+        val benTideButton = findViewById(R.id.benTideButton)
+        benTideButton.setOnClickListener {benTideButtonClicked(it)}
     }
 
     fun kenButtonClicked(view: View) {
@@ -35,6 +38,11 @@ class MainActivity : AppCompatActivity() {
     fun benButtonClicked(view: View) {
         // TODO: start your intent here
         val intent = Intent(this, LoginActivityBen::class.java)
+        startActivity(intent)
+    }
+
+    fun benTideButtonClicked(view: View) {
+        val intent = Intent(this, TideInfoActivityBen::class.java)
         startActivity(intent)
     }
 }
