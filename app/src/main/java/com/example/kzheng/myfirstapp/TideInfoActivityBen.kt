@@ -27,13 +27,14 @@ class TideInfoActivityBen : AppCompatActivity () {
 
         //TODO: create var of the city and state from etCityState and append toString
         var city = etCity.text.toString()
-        //var state = etState.text.toString()
+        // city names greater than one word require an underscore instead of space
+        var cityUpdated = city.replace(" ", "_")
+        var state = etState.text.toString()
 
         //TODO: create val of weatherUndeground link for tide api call
         //see: https://www.wunderground.com/weather/api/d/docs?d=data/tide
         // need to apply API key here
-        // NOTE: Bug here... city names greater than one word require underscore
-        val url="http://api.wunderground.com/api/32f6d2632973079d/tide/q/ca/"+city+".json"
+        val url="http://api.wunderground.com/api/32f6d2632973079d/tide/q/" + state + "/" + cityUpdated + ".json"
         TideAsyncTask().execute(url)
 
     }
@@ -48,6 +49,7 @@ class TideInfoActivityBen : AppCompatActivity () {
             //TODO: Implement a Try and Catch
             try {
                 //TODO: Add val url and import URL from java
+                // p0 is the first instance that was passed
                 val url=URL(p0[0])
                 val urlConnect = url.openConnection() as HttpURLConnection
                 //TODO: Add timeout for the connection
@@ -68,14 +70,8 @@ class TideInfoActivityBen : AppCompatActivity () {
             //TODO: Drill down on API to find tide info and set text to the correct element from the layout
             try {
                 var json = JSONObject(values[0])
-                val tideSummaryStats = json.getJSONObject("tideSummaryStats")
-                //get the max min height
-                var maxHeight = tideSummaryStats.getString("maxHeight")
-                var minHeight = tideSummaryStats.getString("minHeight")
 
-                etWeatherResults.text =
-                        "Maxium Tide Height: " + maxHeight + "ft. \n"
-                        "Minimum Tide Height: " + minHeight + "ft."
+                etWeatherResults.text = "Full response: \n\n" + json
 
 
             }catch(ex:Exception){}
