@@ -6,6 +6,7 @@ package com.example.kzheng.myfirstapp
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.text.method.ScrollingMovementMethod
 import android.view.View
 import kotlinx.android.synthetic.main.activity_tideinfoben.*
 import org.json.JSONObject
@@ -20,6 +21,10 @@ class TideInfoActivityBen : AppCompatActivity () {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tideinfoben)
+
+        etCity.setText("Oakland")
+        etState.setText("CA")
+        etWeatherResults.movementMethod = ScrollingMovementMethod()
     }
 
     protected fun GetTideInfo (view:View) {
