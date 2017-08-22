@@ -7,7 +7,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import kotlinx.android.synthetic.main.activity_tideinfo.*
+import kotlinx.android.synthetic.main.activity_tideinfoben.*
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStream
@@ -19,7 +19,7 @@ class TideInfoActivityBen : AppCompatActivity () {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tideinfoBen)
+        setContentView(R.layout.activity_tideinfoben)
     }
 
     protected fun GetTideInfo (view:View) {
