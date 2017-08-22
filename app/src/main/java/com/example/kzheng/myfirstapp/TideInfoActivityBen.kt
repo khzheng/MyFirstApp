@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.method.ScrollingMovementMethod
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import kotlinx.android.synthetic.main.activity_tideinfoben.*
 import org.json.JSONObject
 import java.io.BufferedReader
@@ -29,6 +30,8 @@ class TideInfoActivityBen : AppCompatActivity () {
 
     protected fun GetTideInfo (view:View) {
 
+        val imm = this.getSystemService(android.content.Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken, 0)
 
         //TODO: create var of the city and state from etCityState and append toString
         var city = etCity.text.toString()
