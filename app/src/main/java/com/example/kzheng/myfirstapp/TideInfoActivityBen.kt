@@ -75,9 +75,28 @@ class TideInfoActivityBen : AppCompatActivity () {
             //TODO: Drill down on API to find tide info and set text to the correct element from the layout
             try {
                 var json = JSONObject(values[0])
+                var tide = json.getJSONObject("tide")
+                var tideInfo = tide.getJSONArray("tideInfo").getJSONObject(0)
+                var tideSummary = tide.getJSONArray("tideSummary")
 
-                etWeatherResults.text = "Full response: \n\n" + json
+                var weatherResultString = "Location: " + tideInfo.get("tideSite") + "\n\n"
 
+                for (i in 0..(tideSummary.length() - 1)) {
+                    // TODO: create models for these
+                    var tideSummaryItem = tideSummary.getJSONObject(i)
+                    var date = tideSummaryItem.getJSONObject("date")
+                    var dateString = date.get("pretty")
+
+                    var data = tideSummaryItem.getJSONObject("data")
+                    var height = data.get("height")
+                    if (height.toString().length == 0)
+                        height = "N/A"
+                    var type = data.get("type")
+
+                    weatherResultString += "" + dateString + " height: " + height + " type: " + type + "\n"
+                }
+
+                etWeatherResults.text = weatherResultString
 
             }catch(ex:Exception){}
         }

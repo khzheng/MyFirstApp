@@ -58,7 +58,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="...Hacking Weather Satellites..."
-        android:textAlignment="center"
         android:maxLines="20"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
